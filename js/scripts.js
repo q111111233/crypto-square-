@@ -21,6 +21,12 @@ function cryptosquare(words){
 
       alert(words[i]);
     }
+    var newArray = words[0].map(function(col, i) {
+      return words.map(function(row) {
+        return row[i];
+      })
+    });
+
 return typeof words[0];
   // for(var i=0; i<column; i++){
   //   for(var j=0; j<column; j++){

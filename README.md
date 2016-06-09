@@ -8,7 +8,8 @@
 
 * find the colunm using sqrt() and make a table of columns
 * insert all letters into the table
-* separate ones, tens, hundreds, and thousands
+* transpose the table
+* 
 
 ## Technologies Used
 
