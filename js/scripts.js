@@ -13,9 +13,15 @@ function cryptosquare(words){
   words = words.replace(/\W/g, '');
 
   var column = Math.ceil(Math.sqrt(words.length));
-  var table = [column];
-  return splitWords(words,column);
+  var table = [column][column];
+  words = splitWords(words,column);
+  //alert(words);
+    for(var i=0; i<column;i++){
+      words[i] = splitWords(words[i],1);
 
+      alert(words[i]);
+    }
+return typeof words[0];
   // for(var i=0; i<column; i++){
   //   for(var j=0; j<column; j++){
   //     table[i][j] =

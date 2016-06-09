@@ -6,8 +6,8 @@
 
 ## Specification
 
-* make a table of rows and columns;
-* do not let more than three of the same characters being in a row
+* find the colunm using sqrt() and make a table of columns
+* insert all letters into the table
 * separate ones, tens, hundreds, and thousands
 
 ## Technologies Used
