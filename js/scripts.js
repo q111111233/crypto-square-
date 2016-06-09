@@ -1,38 +1,32 @@
 
 $(document).ready(function() {
-  $("#roman").submit(function(event) {
+  $("#roman form").submit(function(event) {
     var number = $("#number").val();
     var romanNum = cryptosquare(number);
-      $("#output").text(romanNum);
-
+    $(".output").text(romanNum);
     event.preventDefault();
   });
 });
 
 function cryptosquare(words){
-  words = words.replace(/\W/g, '');
-
+  words = words.replace(/\W/g, '').toLowerCase();
   var column = Math.ceil(Math.sqrt(words.length));
-  var table = [column][column];
   words = splitWords(words,column);
-  //alert(words);
-    for(var i=0; i<column;i++){
-      words[i] = splitWords(words[i],1);
+  for(var i=0; i<words.length;i++){
+    words[i] = splitWords(words[i],1);
+  }
 
-      alert(words[i]);
-    }
-    var newArray = words[0].map(function(col, i) {
-      return words.map(function(row) {
-        return row[i];
-      })
-    });
+  var newArray = words[0].map(function(col, i) {
+    return words.map(function(row) {
+      return row[i];
+    })
+  });
 
-return typeof words[0];
-  // for(var i=0; i<column; i++){
-  //   for(var j=0; j<column; j++){
-  //     table[i][j] =
-  //   }
-  // }
+  for(var i=0; i<newArray.length; i++){
+    newArray[i] = newArray[i].join("");
+  }
+  newArray = newArray.join("");
+  return splitWords(newArray,5);
 }
 
 function splitWords(words,size){

@@ -6,10 +6,10 @@
 
 ## Specification
 
-* find the colunm using sqrt() and make a table of columns
+* find the column using sqrt() and make a table of columns
 * insert all letters into the table
 * transpose the table
-* 
+* make the encrypted words joined together and divided into groups of five letters
 
 ## Technologies Used
 
